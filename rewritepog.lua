@@ -1,14 +1,14 @@
 --                                                                                               Functions
 --****************************************************************************************************************************************************************************************************
 
-function currentroomfunction()
-    local getcurrentroom = currentroomfunction
-    currentroomfunctionformatted(getcurrentroom)
-end
+-- function currentroomfunction()
+--     local getcurrentroom = currentroomfunction
+    -- currentroomfunctionformatted(getcurrentroom)
+-- end
 
-function currentroomfunctionformatted()
-    local currentroomfunctionformatted = currentroomfunctionformatted
-end
+-- function currentroomfunctionformatted()
+    -- -- local currentroomfunctionformatted = currentroomfunctionformatted
+-- end
 
 
 -- function --CastSpellE()
@@ -41,7 +41,7 @@ end
 --     }
     
 --     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
-end
+--end
 
 
 
@@ -227,7 +227,7 @@ function GildedSkiesAutoFarm()
         task.wait (2)
 
     else
-        currentroomfunction(currentroom)
+        --currentroomfunction(currentroom)
         GetTheDamnCoin()
     end
 
@@ -243,7 +243,7 @@ function GildedSkiesAutoFarm()
             --CastSpellE()
             --CastSpellData()
         else
-            currentroomfunction(currentroom)
+            --currentroomfunction(currentroom)
             GetTheDamnCoin()
         end
 
@@ -259,7 +259,7 @@ function GildedSkiesAutoFarm()
                 --CastSpellE()
                 --CastSpellData()
             else
-                currentroomfunction(currentroom)
+                --currentroomfunction(currentroom)
                 GetTheDamnCoin()
             end
 
@@ -275,7 +275,7 @@ function GildedSkiesAutoFarm()
                     --CastSpellE()
                     --CastSpellData()
                 else
-                    currentroomfunction(currentroom)
+                    --currentroomfunction(currentroom)
                     GetTheDamnCoin()
                 end
 
@@ -290,7 +290,7 @@ function GildedSkiesAutoFarm()
                         --CastSpellE()
                         --CastSpellData()
                     else
-                        currentroomfunction(currentroom)
+                        --currentroomfunction(currentroom)
                         GetTheDamnCoin()
                     end
 
@@ -305,7 +305,7 @@ function GildedSkiesAutoFarm()
                             --CastSpellE()
                             --CastSpellData()
                         else
-                            currentroomfunction(currentroom)
+                            --currentroomfunction(currentroom)
                             GetTheDamnCoin()
                         end
 
@@ -315,7 +315,7 @@ function GildedSkiesAutoFarm()
                                 FailDungeon()
                                 -- RetryDungeon()
                             else
-                                currentroomfunction(currentroom)
+                                --currentroomfunction(currentroom)
                                 GetTheDamnCoin()
                             end           
 end
