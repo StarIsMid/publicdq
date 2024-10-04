@@ -11,36 +11,36 @@ function currentroomfunctionformatted()
 end
 
 
-function CastSpellE()
-    local args = {
-        [1] = "e",
-        [2] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
-    }
+-- function --CastSpellE()
+--     local args = {
+--         [1] = "e",
+--         [2] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
+--     }
     
-    game:GetService("ReplicatedStorage").remotes.abilityUsed:FireServer(unpack(args))
-end
+--     game:GetService("ReplicatedStorage").remotes.abilityUsed:FireServer(unpack(args))
+-- end
 
-function CastSpellQ()
-    local args = {
-        [1] = "q",
-        [2] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
-    }
+-- function CastSpellQ()
+--     local args = {
+--         [1] = "q",
+--         [2] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
+--     }
     
-    game:GetService("ReplicatedStorage").remotes.abilityUsed:FireServer(unpack(args))
-end
+--     game:GetService("ReplicatedStorage").remotes.abilityUsed:FireServer(unpack(args))
+-- end
 
 
-function CastSpellData()
-    local args = {
-        [1] = {
-            [1] = {
-                ["\t"] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
-            },
-            [2] = "J"
-        }
-    }
+-- function --CastSpellData()
+--     local args = {
+--         [1] = {
+--             [1] = {
+--                 ["\t"] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spinning Blade Smash")
+--             },
+--             [2] = "J"
+--         }
+--     }
     
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
+--     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 end
 
 
@@ -66,22 +66,22 @@ function FailDungeon()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 end
 
-function RetryDungeon()
-    while true do 
-        task.wait(0.1)
-        local args = {
-            [1] = {
-                [1] = {
-                    ["\3"] = "vote",
-                    ["vote"] = true
-                },
-                [2] = "4"
-            }
-        }
+-- function RetryDungeon()
+--     while true do 
+--         task.wait(0.1)
+--         local args = {
+--             [1] = {
+--                 [1] = {
+--                     ["\3"] = "vote",
+--                     ["vote"] = true
+--                 },
+--                 [2] = "4"
+--             }
+--         }
     
-        game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
-    end
-end
+--         game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
+--     end
+-- end
 
 
 function GetTheDamnCoin()
@@ -101,18 +101,17 @@ function GetTheDamnCoin()
 
         rootpartmeow.Anchored = false
 
-        -- CastSpellData()
-        -- CastSpellE()
-
+        -- --CastSpellData()
+        -- --CastSpellE()
 
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 10, coincframemeow.Y, coincframemeow.Z - 10)
-        task.wait(0.2)
+        task.wait(0.5)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 8, coincframemeow.Y, coincframemeow.Z - 8)
-        task.wait(0.2)
+        task.wait(0.5)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 6, coincframemeow.Y, coincframemeow.Z - 6)
-        task.wait(0.2)
+        task.wait(0.5)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 4, coincframemeow.Y, coincframemeow.Z - 4)
-        task.wait(0.2)
+        task.wait(0.5)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X, coincframemeow.Y, coincframemeow.Z)
     end
 end
@@ -131,14 +130,14 @@ end
         
 --         task.wait(0.1)
 
---         CastSpellData()
+        -- --CastSpellData()
 
 --         local looper = 0
 
 --         while looper ~= 100 do
 --             task.wait(0.1)
 --             looper = looper + 1
---             CastSpellE()
+            -- --CastSpellE()
 --             Mouse1()
 --             if looper == 100 then
 --                 GetTheDamnCoin()
@@ -201,8 +200,8 @@ function GildedSkiesAutoFarm()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 
 
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
     task.wait(1.5)
 
@@ -222,8 +221,8 @@ function GildedSkiesAutoFarm()
 
         task.wait(0.1)
 
-        CastSpellE()
-        CastSpellData()
+        --CastSpellE()
+        --CastSpellData()
 
         task.wait (2)
 
@@ -241,8 +240,8 @@ function GildedSkiesAutoFarm()
             game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(622, 100, 27)
             game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-            CastSpellE()
-            CastSpellData()
+            --CastSpellE()
+            --CastSpellData()
         else
             currentroomfunction(currentroom)
             GetTheDamnCoin()
@@ -257,8 +256,8 @@ function GildedSkiesAutoFarm()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(700, 100, 176)
                 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-                CastSpellE()
-                CastSpellData()
+                --CastSpellE()
+                --CastSpellData()
             else
                 currentroomfunction(currentroom)
                 GetTheDamnCoin()
@@ -273,8 +272,8 @@ function GildedSkiesAutoFarm()
                     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(748, 100, 270)
                     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-                    CastSpellE()
-                    CastSpellData()
+                    --CastSpellE()
+                    --CastSpellData()
                 else
                     currentroomfunction(currentroom)
                     GetTheDamnCoin()
@@ -288,8 +287,8 @@ function GildedSkiesAutoFarm()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(595, 100, -4)
                         game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-                        CastSpellE()
-                        CastSpellData()
+                        --CastSpellE()
+                        --CastSpellData()
                     else
                         currentroomfunction(currentroom)
                         GetTheDamnCoin()
@@ -303,8 +302,8 @@ function GildedSkiesAutoFarm()
                             game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(738, 100, -158)
                             game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-                            CastSpellE()
-                            CastSpellData()
+                            --CastSpellE()
+                            --CastSpellData()
                         else
                             currentroomfunction(currentroom)
                             GetTheDamnCoin()
@@ -314,7 +313,7 @@ function GildedSkiesAutoFarm()
                             if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
                                 currentroom = currentroom + 1
                                 FailDungeon()
-                                RetryDungeon()
+                                -- RetryDungeon()
                             else
                                 currentroomfunction(currentroom)
                                 GetTheDamnCoin()
@@ -367,14 +366,14 @@ function EnchantedForestAutoFarm()
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
     task.wait(2)
 
     if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
         FailDungeon()
-        RetryDungeon()
+        -- RetryDungeon()
     else
         GetTheDamnCoin()
     end
@@ -409,18 +408,20 @@ function AquaticTempleAutoFarm()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-853, 50, 2325)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
 
-    task.wait(7)
+    --CastSpellE()
+    --CastSpellData()
+    --CastSpellData()
+
+    task.wait(1)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-946, 50, 2325)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
-    task.wait(2)
+    task.wait(1)
 
     -- first boss
 
@@ -436,54 +437,54 @@ function AquaticTempleAutoFarm()
 
     Mouse1()
 
-    task.wait(4.5)
+    task.wait(2)
 
     -- room 2
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1230, 35, 2325)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
-    task.wait(7)
+    task.wait(1)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1350, 0, 2131)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
-    task.wait(7)
+    task.wait(4)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1350, 0, 2221)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
 
-    task.wait(7)
+    task.wait(1)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1269, 10, 2500)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
-    task.wait(7)
+    task.wait(1)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1466, 20, 2500)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-    CastSpellE()
-    CastSpellData()
+    --CastSpellE()
+    --CastSpellData()
 
-    task.wait(2)
+    task.wait(3)
 
     if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
         FailDungeon()
-        RetryDungeon()
+        -- RetryDungeon()
     else 
         GetTheDamnCoin()
     end
