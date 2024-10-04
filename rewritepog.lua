@@ -43,14 +43,18 @@
 --     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 --end
 
+function lerpZ(playercoordsZ, coinZ, alphaZ)
+    return playercoordsZ + (coinZ - playercoordsZ)*alphaZ
+end
 
+function lerpX(playercoordsX, coinX, alphaX)
+    return playercoordsX + (coinX - playercoordsX)*alphaX
+end
 
 function Mouse1()
     game:GetService("ReplicatedStorage").remotes.weaponUsed:FireServer()
     game:GetService("Players").LocalPlayer.Character.dualRight.swing:FireServer()
 end
-
-
 
 
 function FailDungeon()
@@ -88,24 +92,38 @@ function GetTheDamnCoin()
     while true do
         task.wait(0.5)
 
-        local playerscframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
         -- while true do
         --     task.wait(0.1)
         --     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(playerscframe.X, playerscframe.Y + 50, playerscframe.Z)
         -- end
 
         game:GetService("Workspace"):WaitForChild("Coin")
+
         local rootpartmeow = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+        local playerscframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         local coincframemeow = game:GetService("Workspace").Coin.Coin.CFrame
 
         rootpartmeow.Anchored = false
 
+        local function lerpZ(playercoordsZ, coinZ, alphaZ)
+            return playercoordsZ + (coinZ - playercoordsZ)*alphaZ
+        end
+
+        local function lerpX(playercoordsX, coinX, alphaX)
+            return playercoordsX + (coinX - playercoordsX)*alphaX
+        end
+
         -- --CastSpellData()
         -- --CastSpellE()
-
-        task.wait(4)
-
+        rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.2), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.2))
+        task.wait(0.7)
+        rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.4), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.4))
+        task.wait(0.7)
+        rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.6), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.6))
+        task.wait(0.7)
+        rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.8), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.8))
+        task.wait(0.7)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X, coincframemeow.Y, coincframemeow.Z)
     end
 end
@@ -387,19 +405,20 @@ function AquaticTempleAutoFarm()
     StartDungeon()
     
 
-    task.wait(10)
+    task.wait(8)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-
+    task.wait(1.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-670, 50, 2325)
-    task.wait(0.37)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-700, 50, 2325)
-    task.wait(0.37)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-750, 50, 2325)
-    task.wait(0.37)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-800, 50, 2325)
-    task.wait(0.37)
+    task.wait(1.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-720, 50, 2325)
+    task.wait(1.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-770, 50, 2325)
+    task.wait(1.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-820, 50, 2325)
+    task.wait(1.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-853, 50, 2325)
+    print("tping! with tolperation")
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 
