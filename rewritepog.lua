@@ -104,14 +104,8 @@ function GetTheDamnCoin()
         -- --CastSpellData()
         -- --CastSpellE()
 
-        rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 10, coincframemeow.Y, coincframemeow.Z - 10)
-        task.wait(0.5)
-        rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 8, coincframemeow.Y, coincframemeow.Z - 8)
-        task.wait(0.5)
-        rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 6, coincframemeow.Y, coincframemeow.Z - 6)
-        task.wait(0.5)
-        rootpartmeow.CFrame = CFrame.new(coincframemeow.X - 4, coincframemeow.Y, coincframemeow.Z - 4)
-        task.wait(0.5)
+        task.wait(4)
+
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X, coincframemeow.Y, coincframemeow.Z)
     end
 end
@@ -483,6 +477,7 @@ function AquaticTempleAutoFarm()
     task.wait(3)
 
     if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+        print("No Greg!")
         FailDungeon()
         -- RetryDungeon()
     else 
