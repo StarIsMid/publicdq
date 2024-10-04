@@ -413,7 +413,7 @@ function AquaticTempleAutoFarm()
     --CastSpellData()
     --CastSpellData()
 
-    task.wait(1)
+    task.wait(2)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-946, 50, 2325)
@@ -421,7 +421,7 @@ function AquaticTempleAutoFarm()
     --CastSpellE()
     --CastSpellData()
 
-    task.wait(1)
+    task.wait(2)
 
     -- first boss
 
@@ -429,11 +429,11 @@ function AquaticTempleAutoFarm()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1090, 36, 2334)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 
-    task.wait(1)
+    task.wait(2)
 
     Mouse1()
 
-    task.wait(1)
+    task.wait(2)
 
     Mouse1()
 
@@ -447,7 +447,7 @@ function AquaticTempleAutoFarm()
     --CastSpellE()
     --CastSpellData()
 
-    task.wait(1)
+    task.wait(2)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1350, 0, 2131)
@@ -464,7 +464,7 @@ function AquaticTempleAutoFarm()
     --CastSpellData()
 
 
-    task.wait(1)
+    task.wait(2)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1269, 10, 2500)
@@ -472,7 +472,7 @@ function AquaticTempleAutoFarm()
     --CastSpellE()
     --CastSpellData()
 
-    task.wait(1)
+    task.wait(2)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1466, 20, 2500)
