@@ -399,13 +399,13 @@ function AquaticTempleAutoFarm()
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-670, 50, 2325)
-    task.wait(0.28)
+    task.wait(0.37)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-700, 50, 2325)
-    task.wait(0.28)
+    task.wait(0.37)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-750, 50, 2325)
-    task.wait(0.28)
+    task.wait(0.37)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-800, 50, 2325)
-    task.wait(0.28)
+    task.wait(0.37)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-853, 50, 2325)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
