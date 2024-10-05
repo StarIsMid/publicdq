@@ -167,7 +167,8 @@ function AquaticTempleAutoFarm()
     task.wait(8)
 
 
-    tp(-690, 36, 2326)
+    walk(-690, 36, 2326)
+    task.wait(1)
 
 
     -- group 1
