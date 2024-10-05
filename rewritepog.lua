@@ -577,4 +577,4 @@ end
 
 -- findwhattoautofarm()
 
-EnchantedForestAutoFarm()
+GildedSkiesAutoFarm()
