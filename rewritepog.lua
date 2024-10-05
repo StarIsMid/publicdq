@@ -3,14 +3,31 @@
 
 
 
+function RetryDungeon()
+    while true do
+        task.wait(0.1)
+        local args = {
+            [1] = {
+                [1] = {
+                    ["\3"] = "vote",
+                    ["vote"] = true
+                },
+                [2] = "0"
+            }
+        }
+
+        game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
+    end
+end
+
+
+
 function walk(X, Y, Z)
     game.Players.LocalPlayer.Character.Humanoid.WalkToPoint = Vector3.new(X, Y, Z)
 end
 function tp(X, Y, Z)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(X, Y, Z)
 end
-
-
 
 
 
@@ -24,12 +41,12 @@ end
 
 
 
-
-
 function Mouse1()
     game:GetService("ReplicatedStorage").remotes.weaponUsed:FireServer()
     game:GetService("Players").LocalPlayer.Character.dualRight.swing:FireServer()
 end
+
+
 
 function FailDungeon()
 
@@ -45,6 +62,8 @@ function FailDungeon()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 end
 
+
+
 function RetryDungeon()
      while true do
          task.wait(0.1)
@@ -54,7 +73,7 @@ function RetryDungeon()
                      ["\3"] = "vote",
                      ["vote"] = true
                  },
-                 [2] = "4"
+                 [2] = "0"
              }
          }
 
@@ -109,6 +128,8 @@ end
 --                                                                                           AutoFarms
 --****************************************************************************************************************************************************************************************************
 
+
+
 function DesertTempleAutoFarm()
     print("Desert Temple AutoFarm")
 end
@@ -154,7 +175,6 @@ function VolcanicChambersAutoFarm()
 end
 
 function AquaticTempleAutoFarm()
-
     print("Aquatic Temple AutoFarm")
 
     local PlayerHumanoid = game.Players.LocalPlayer.Character.Humanoid
@@ -229,10 +249,12 @@ function AquaticTempleAutoFarm()
 
     if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
         FailDungeon()
+        RetryDungeon()
     else
         GetTheDamnCoin()
     end           
 end
+
 
 
 function EnchantedForestAutoFarm()
@@ -253,88 +275,73 @@ end
 
 
 
-
 --                                                                                           Auto Farm Finder
 --****************************************************************************************************************************************************************************************************
 
 
 
-
--- function findwhattoautofarm()
---     if game:GetService("Workspace").dungeonName.Value == "Desert Temple" then
---         DesertTempleAutoFarm()
---     else
---         if game:GetService("Workspace").dungeonName.Value == "Winter Outpost" then
---             WinterOutpostAutoFarm()
---         else
---             if game:GetService("Workspace").dungeonName.Value == "Pirate Island" then
---                 PiarteIslandAutoFarm()
---             else
---                 if game:GetService("Workspace").dungeonName.Value == "King's Castle" then
---                     KingsCastleAutoFarm()
---                 else
---                     function findwhattoautofarm()
---                         if game:GetService("Workspace").dungeonName.Value == "The Underworld" then
---                             TheUnderworldAutoFarm()
---                         else
---                             if game:GetService("Workspace").dungeonName.Value == "Samurai Palace" then
---                                 SamuraiPalaceAutoFarm()
---                             else
---                                 if game:GetService("Workspace").dungeonName.Value == "The Canal's" then
---                                     TheCanalsAutoFarm()
---                                 else
---                                     if game:GetService("Workspace").dungeonName.Value == "Ghastly Harbor" then
---                                         GhastlyHarborAutoFarm()
---                                     else
---                                         function findwhattoautofarm()
---                                             if game:GetService("Workspace").dungeonName.Value == "Steampunk Sewers" then
---                                                 SteampunkSewersAutoFarm()
---                                             else
---                                                 if game:GetService("Workspace").dungeonName.Value == "Orbital Outpost" then
---                                                     OrbitalOutpostAutoFarm()
---                                                 else
---                                                     if game:GetService("Workspace").dungeonName.Value == "Volcanic Chambers" then
---                                                         VolcanicChambersAutoFarm()
---                                                     else
---                                                         if game:GetService("Workspace").dungeonName.Value == "Aquatic Temple" then
---                                                             AquaticTempleAutoFarm()
---                                                         else
---                                                             function findwhattoautofarm()
---                                                                 if game:GetService("Workspace").dungeonName.Value == "Enchanted Forest" then
---                                                                     EnchantedForestAutoFarm()
---                                                                 else
---                                                                     if game:GetService("Workspace").dungeonName.Value == "Northern Lands" then
---                                                                         AquaticTempleAutoFarm()
---                                                                     else
---                                                                         if game:GetService("Workspace").dungeonName.Value == "Gilded Skies" then
---                                                                             GildedSkiesAutoFarm()
---                                                                         else
---                                                                             if game:GetService("Workspace").dungeonName.Value == "Yokai Peak" then
---                                                                                 YokaiPeakAutoFarm()
---                                                                             else
---                                                                                 warn("Dungeon Not Found / In Lobby / Line 282")
---                                                                             end
---                                                                         end
---                                                                     end
---                                                                 end
---                                                             end
---                                                         end
---                                                     end
---                                                 end
---                                             end
---                                         end
---                                     end
---                                 end
---                             end
---                         end
---                     end
---                 end
---             end
---         end
---     end
--- end
-
-
--- findwhattoautofarm()
-
-AquaticTempleAutoFarm()
+function findwhattoautofarm()
+    if game:GetService("Workspace").dungeonName.Value == "Desert Temple" then
+        DesertTempleAutoFarm()
+    else
+        if game:GetService("Workspace").dungeonName.Value == "Winter Outpost" then
+            WinterOutpostAutoFarm()
+        else
+            if game:GetService("Workspace").dungeonName.Value == "Piarte Island" then
+                PiarteIslandAutoFarm()
+            else
+                if game:GetService("Workspace").dungeonName.Value == "Kings Castle" then
+                    KingsCastleAutoFarm()
+                else
+                    if game:GetService("Workspace").dungeonName.Value == "The Underworld" then
+                        TheUnderworldAutoFarm()
+                    else
+                        if game:GetService("Workspace").dungeonName.Value == "Samurai Palace" then
+                            SamuraiPalaceAutoFarm()
+                        else
+                            if game:GetService("Workspace").dungeonName.Value == "The Canals" then
+                                TheCanalsAutoFarm()
+                            else
+                                if game:GetService("Workspace").dungeonName.Value == "Ghastly Harbor" then
+                                    GhastlyHarborAutoFarm()
+                                else
+                                    if game:GetService("Workspace").dungeonName.Value == "Steampunk Sewers" then
+                                        SteampunkSewersAutoFarm()
+                                    else
+                                        if game:GetService("Workspace").dungeonName.Value == "Orbital Outpost" then
+                                            OrbitalOutpostAutoFarm()
+                                        else
+                                            if game:GetService("Workspace").dungeonName.Value == "Volcanic Chambers" then
+                                                VolcanicChambersAutoFarm()
+                                            else
+                                                if game:GetService("Workspace").dungeonName.Value == "Aquatic Temple" then
+                                                    AquaticTempleAutoFarm()
+                                                else
+                                                    if game:GetService("Workspace").dungeonName.Value == "Enchanted Forest" then
+                                                        EnchantedForestAutoFarm()
+                                                    else
+                                                        if game:GetService("Workspace").dungeonName.Value == "Gilded Skies" then
+                                                            GildedSkiesAutoFarm()
+                                                        else
+                                                            if game:GetService("Workspace").dungeonName.Value == "Yokai Peak" then
+                                                                YokaiPeakAutoFarm()
+                                                            else
+                                                                print("Dungeon Not Found! / Are You Sure Ur Not In The Lobby?")
+                                                            end
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+                                                             
+findwhattoautofarm()
