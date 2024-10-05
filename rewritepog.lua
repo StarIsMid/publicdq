@@ -78,10 +78,8 @@ function GetTheDamnCoin()
         game:GetService("Workspace"):WaitForChild("Coin")
 
         local rootpartmeow = game.Players.LocalPlayer.Character.HumanoidRootPart
-
         local playerscframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
         local coincframemeow = game:GetService("Workspace").Coin.Coin.CFrame
-
         rootpartmeow.Anchored = false
 
         local function lerpZ(playercoordsZ, coinZ, alphaZ)
@@ -95,13 +93,13 @@ function GetTheDamnCoin()
         -- --CastSpellData()
         -- --CastSpellE()
         rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.2), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.2))
-        task.wait(0.8)
+        task.wait(0.35)
         rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.4), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.4))
-        task.wait(0.8)
+        task.wait(0.35)
         rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.6), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.6))
-        task.wait(0.8)
+        task.wait(0.35)
         rootpartmeow.CFrame = CFrame.new(lerpX(playerscframe.X, coincframemeow.X, 0.8), coincframemeow.Y, lerpZ(playerscframe.Z, coincframemeow.Z, 0.8))
-        task.wait(0.8)
+        task.wait(0.35)
         rootpartmeow.CFrame = CFrame.new(coincframemeow.X, coincframemeow.Y, coincframemeow.Z)
     end
 end
@@ -215,14 +213,14 @@ function AquaticTempleAutoFarm()
 
     -- group 4
     walk(-1313, -24, 2227)
-    task.wait(2.5)
+    task.wait(2)
     walk(-1262, -13, 2496)
-    task.wait(6.5)
+    task.wait(5)
     tp(-1262, -13, 2496)
     task.wait(2)
 
     walk(-1467, 5, 2489)
-    task.wait(3)
+    task.wait(2)
     tp(-1467, 5, 2489)
 
     task.wait(2)
