@@ -196,20 +196,14 @@ function AquaticTempleAutoFarm()
 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
     game.Players.LocalPlayer.Character.Humanoid.WalkToPoint = Vector3.new(-853, 50, 2325)
-    task.wait(4)
+    task.wait(7)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-
-    task.wait(1.5)
-
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cframeplr.X, cframeplr.Y + 15, cframeplr.Z)
-
 
     --CastSpellE()
     --CastSpellData()
     --CastSpellData()
 
-    task.wait(0.5)
+    task.wait(2)
 
     game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-946, 50, 2325)
@@ -291,6 +285,49 @@ end
 
 function EnchantedForestAutoFarm()
     print("EnchantedForestAutoFarm")
+
+    -- room 1
+
+    StartDungeon()
+    
+
+    task.wait(10)
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(75, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-100, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-125, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-150, 30, -48)
+    task.wait(0.22)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-165, 30, -45)
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+
+    --CastSpellE()
+    --CastSpellData()
+
+    task.wait(2)
+
+    if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+        FailDungeon()
+        -- RetryDungeon()
+    else
+        GetTheDamnCoin()
+    end
 end
 
 function NorthernLandsAutoFarm()
@@ -298,7 +335,156 @@ function NorthernLandsAutoFarm()
 end
 
 function GildedSkiesAutoFarm()
+
+    local currentroom
+
+    currentroom = currentroom
+
     print("GildedSkiesAutoFarm")
+
+    -- room 1
+
+    StartDungeon()
+    local currentroom = 1
+    
+    task.wait(10)
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75, 50, 0)
+    task.wait(0.36)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25, 50, 0)
+    task.wait(0.36)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25, 50, 0)
+    task.wait(0.36)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50, 50, 0)
+    task.wait(0.36)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(75, 50, 0)
+    task.wait(0.36)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 50, 0)
+    task.wait(0.55)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(150, 50, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+
+
+    --CastSpellE()
+    --CastSpellData()
+
+    task.wait(1.5)
+
+    -- room 2
+
+    if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+
+        task.wait(5.5)
+
+        currentroom = currentroom + 1
+        
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(310, 70, 0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+
+
+        task.wait(0.1)
+
+        --CastSpellE()
+        --CastSpellData()
+
+        task.wait (2)
+
+    else
+        --currentroomfunction(currentroom)
+        GetTheDamnCoin()
+    end
+
+        -- room 3
+
+        task.wait(2)
+        if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+            currentroom = currentroom + 1
+            task.wait(5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(622, 100, 27)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+            --CastSpellE()
+            --CastSpellData()
+        else
+            --currentroomfunction(currentroom)
+            GetTheDamnCoin()
+        end
+
+            -- room 4
+
+            task.wait(2)
+            if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+                currentroom = currentroom + 1
+                task.wait(5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(700, 100, 176)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                --CastSpellE()
+                --CastSpellData()
+            else
+                --currentroomfunction(currentroom)
+                GetTheDamnCoin()
+            end
+
+                -- room 5
+                
+                task.wait(2)
+                if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+                    currentroom = currentroom + 1
+                    task.wait(5)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(748, 100, 270)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                    --CastSpellE()
+                    --CastSpellData()
+                else
+                    --currentroomfunction(currentroom)
+                    GetTheDamnCoin()
+                end
+
+                    -- room 6
+                    task.wait(2)
+                    if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+                        currentroom = currentroom + 1
+                        task.wait(5)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(595, 100, -4)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                        --CastSpellE()
+                        --CastSpellData()
+                    else
+                        --currentroomfunction(currentroom)
+                        GetTheDamnCoin()
+                    end
+
+                        -- room 7
+                        task.wait(2)
+                        if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+                            currentroom = currentroom + 1
+                            task.wait(5)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(738, 100, -158)
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                            --CastSpellE()
+                            --CastSpellData()
+                        else
+                            --currentroomfunction(currentroom)
+                            GetTheDamnCoin()
+                        end
+
+                            task.wait(2)
+                            if game:GetService("Players").LocalPlayer.PlayerGui.bossHealth.healthFrame.bossName.Text ~= "Gregg" then
+                                currentroom = currentroom + 1
+                                FailDungeon()
+                                -- RetryDungeon()
+                            else
+                                --currentroomfunction(currentroom)
+                                GetTheDamnCoin()
+                            end           
 end
 
 function YokaiPeakAutoFarm ()
@@ -391,4 +577,4 @@ end
 
 -- findwhattoautofarm()
 
-AquaticTempleAutoFarm()
+EnchantedForestAutoFarm()
